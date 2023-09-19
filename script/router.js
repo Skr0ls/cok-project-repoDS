@@ -17,7 +17,7 @@ class Router {
     var client = new XMLHttpRequest();
     client.open('GET', matchedRoute.getTemplate(matchedRoute.params));
     client.onreadystatechange = function () {
-      routerOutletElement.innerHTML = client.responseText;
+      setInnerHTML(routerOutletElement, client.responseText);
     }
     client.send();
   }
@@ -65,4 +65,22 @@ class Router {
     // Загрузите начальный маршрут.
     this.loadRoute(...pathSegments);
   }
+}
+
+function setInnerHTML(elm, html) {
+  elm.innerHTML = html;
+  
+  Array.from(elm.querySelectorAll("script"))
+    .forEach( oldScriptEl => {
+      const newScriptEl = document.createElement("script");
+      
+      Array.from(oldScriptEl.attributes).forEach( attr => {
+        newScriptEl.setAttribute(attr.name, attr.value) 
+      });
+      
+      const scriptText = document.createTextNode(oldScriptEl.innerHTML);
+      newScriptEl.appendChild(scriptText);
+      
+      oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
+  });
 }
