@@ -8,11 +8,11 @@ const routes = [
     getTemplate: (params) => '../modules/tourism/tourism.html'
   },
   {
-    path: '/clothes/belts',
+    path: '/clothes-belts',
     getTemplate: (params) => '../modules/belts/belts.html'
   },
   {
-    path: '/clothes/shoulders',
+    path: '/clothes-shoulders',
     getTemplate: (params) => '../modules/shoulders/shoulders.html'
   },
 ];
