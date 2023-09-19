@@ -1,20 +1,20 @@
-const btn1 = document.querySelector('.pop-up-window__btn1');
-const btn2 = document.querySelector('.pop-up-window__btn2');
-const btn3 = document.querySelector('.pop-up-window__btn3');
-const btn4 = document.querySelector('.pop-up-window__btn4');
-const btn5 = document.querySelector('.pop-up-window__btn5');
+var btn1 = document.querySelector('.pop-up-window__btn1');
+var btn2 = document.querySelector('.pop-up-window__btn2');
+var btn3 = document.querySelector('.pop-up-window__btn3');
+var btn4 = document.querySelector('.pop-up-window__btn4');
+var btn5 = document.querySelector('.pop-up-window__btn5');
 
-const popUpWindowInfoContent = document.querySelector('.pop-up-container-info-content');
-const popUpWindowKeyWords = document.querySelector('.pop-up-container-key-words');
-const popUpWindowCard1 = document.querySelector('.pop-up-container-card-1');
-const popUpWindowCard2 = document.querySelector('.pop-up-container-card-2');
-const popUpWindowCard3 = document.querySelector('.pop-up-container-card-3');
+var popUpWindowInfoContent = document.querySelector('.pop-up-container-info-content');
+var popUpWindowKeyWords = document.querySelector('.pop-up-container-key-words');
+var popUpWindowCard1 = document.querySelector('.pop-up-container-card-1');
+var popUpWindowCard2 = document.querySelector('.pop-up-container-card-2');
+var popUpWindowCard3 = document.querySelector('.pop-up-container-card-3');
 
-const btnClose1 = document.querySelector('.close-btn1');
-const btnClose2 = document.querySelector('.close-btn2');
-const btnClose3 = document.querySelector('.close-btn3');
-const btnClose4 = document.querySelector('.close-btn4');
-const btnClose5 = document.querySelector('.close-btn5');
+var btnClose1 = document.querySelector('.close-btn1');
+var btnClose2 = document.querySelector('.close-btn2');
+var btnClose3 = document.querySelector('.close-btn3');
+var btnClose4 = document.querySelector('.close-btn4');
+var btnClose5 = document.querySelector('.close-btn5');
 
 function overflowHiden() {
     document.querySelector('body').classList.toggle('over-flow-body');

@@ -1,2 +1,2 @@
-const line = document.querySelector('.card-navigation-line');
-const shadow =  document.querySelector('.shadow');
+var line = document.querySelector('.card-navigation-line');
+var shadow =  document.querySelector('.shadow');

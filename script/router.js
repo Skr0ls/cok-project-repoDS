@@ -6,6 +6,7 @@ class Router {
   }
 
   loadRoute(...urlSegments) {
+    console.log('loading route')
     // Получение шаблона для данного маршрута.
     const matchedRoute = this._matchUrlToRoute(urlSegments);
 
@@ -13,11 +14,12 @@ class Router {
     history.pushState({}, '', url);
 
     const routerOutletElement = document.querySelectorAll('[data-router-outlet]')[0];
-
+  
     var client = new XMLHttpRequest();
     client.open('GET', matchedRoute.getTemplate(matchedRoute.params));
     client.onreadystatechange = function () {
-      setInnerHTML(routerOutletElement, client.responseText);
+      if (client.readyState === XMLHttpRequest.DONE)
+        setInnerHTML(routerOutletElement, client.responseText);
     }
     client.send();
   }
@@ -69,18 +71,15 @@ class Router {
 
 function setInnerHTML(elm, html) {
   elm.innerHTML = html;
-  
-  Array.from(elm.querySelectorAll("script"))
-    .forEach( oldScriptEl => {
-      const newScriptEl = document.createElement("script");
+
+  Array.from(elm.querySelectorAll("script")).forEach(oldScript => {
+
+    const newScript = document.createElement("script");
+
+    Array.from(oldScript.attributes)
+      .forEach(attr => newScript.setAttribute(attr.name, attr.value));
       
-      Array.from(oldScriptEl.attributes).forEach( attr => {
-        newScriptEl.setAttribute(attr.name, attr.value) 
-      });
-      
-      const scriptText = document.createTextNode(oldScriptEl.innerHTML);
-      newScriptEl.appendChild(scriptText);
-      
-      oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
+    newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+    oldScript.parentNode.replaceChild(newScript, oldScript);
   });
 }
