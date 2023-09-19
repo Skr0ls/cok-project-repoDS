@@ -9,8 +9,6 @@ class Router {
     // Получение шаблона для данного маршрута.
     const matchedRoute = this._matchUrlToRoute(urlSegments);
 
-    // Отправка записи в историю с новым URL-адресом.
-    // Мы передаем пустой объект и пустую строку в качестве аргументов HistoryState и Title, но их значения здесь не имеют большого значения.    
     const url = `/${urlSegments.join('/')}`;
     history.pushState({}, '', url);
 
