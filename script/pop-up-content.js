@@ -8,6 +8,7 @@ function read() {
     const doc = url.searchParams.get('docs');
     const doc1 = url.pathname
     let file = '';
+    console.log(url)
     switch(doc1) {
         case '/tourism':
             file1 = 'script/markdown/aboutinfo/tourism-info.md';
@@ -31,11 +32,11 @@ function read() {
             file5 = 'script/markdown/recomended/shoulders/3.md';
             break;
         default:
-            file1 = '';
-            file2 = '';
-            file3 = '';
-            file4 = '';
-            file5 = '';
+            file1 = 'script/markdown/aboutinfo/tourism-info.md';
+            file2 = 'script/markdown/keywords/tourism-key.md';
+            file3 = 'script/markdown/recomended/tourism/1.md';
+            file4 = 'script/markdown/recomended/tourism/2.md';
+            file5 = 'script/markdown/recomended/tourism/3.md';
             break;
 
     }
