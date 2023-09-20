@@ -1,0 +1,92 @@
+content1 = document.getElementById('aboutContent');
+content2 = document.getElementById('keyWords');
+content3 = document.getElementById('pop1');
+content4 = document.getElementById('pop2');
+content5 = document.getElementById('pop3');
+function read() {
+    const url = new URL(window.location.href);
+    const doc = url.searchParams.get('docs');
+    const doc1 = url.pathname
+    let file = '';
+    console.log(url)
+    switch(doc1) {
+        case '/tourism':
+            file1 = 'script/markdown/aboutinfo/tourism-info.md';
+            file2 = 'script/markdown/keywords/tourism-key.md';
+            file3 = 'script/markdown/recomended/tourism/1.md';
+            file4 = 'script/markdown/recomended/tourism/2.md';
+            file5 = 'script/markdown/recomended/tourism/3.md';
+            break;
+        case '/clothes-belts':
+            file1 = 'script/markdown/aboutinfo/belts-info.md';
+            file2 = 'script/markdown/keywords/belts-key.md';
+            file3 = 'script/markdown/recomended/belts/1.md';
+            file4 = 'script/markdown/recomended/belts/2.md';
+            file5 = 'script/markdown/recomended/belts/3.md';
+            break;
+        case '/clothes-shoulders':
+            file1 = 'script/markdown/keywords/shoulders-info.md';
+            file2 = 'script/markdown/aboutinfo/shoulders-key.md';
+            file3 = 'script/markdown/recomended/shoulders/1.md';
+            file4 = 'script/markdown/recomended/shoulders/2.md';
+            file5 = 'script/markdown/recomended/shoulders/3.md';
+            break;
+        default:
+            file1 = 'script/markdown/aboutinfo/tourism-info.md';
+            file2 = 'script/markdown/keywords/tourism-key.md';
+            file3 = 'script/markdown/recomended/tourism/1.md';
+            file4 = 'script/markdown/recomended/tourism/2.md';
+            file5 = 'script/markdown/recomended/tourism/3.md';
+            break;
+
+    }
+    console.log(doc1)
+   if (file1 !== '') {
+        fetch(file1)
+            .then(response => {
+                return response.text();
+            })
+            .then(response => {
+                content1.innerHTML = window.marked.marked(response);
+            })
+    }
+    if (file2 !== '') {
+        fetch(file2)
+            .then(response => {
+                return response.text();
+            })
+            .then(response => {
+                content2.innerHTML = window.marked.marked(response);
+            })
+    }
+    if (file3 !== '') {
+        fetch(file3)
+            .then(response => {
+                return response.text();
+            })
+            .then(response => {
+                content3.innerHTML = window.marked.marked(response);
+            })
+    }
+    if (file4 !== '') {
+        fetch(file4)
+            .then(response => {
+                return response.text();
+            })
+            .then(response => {
+                content4.innerHTML = window.marked.marked(response);
+            })
+    }
+    if (file5 !== '') {
+        fetch(file5)
+            .then(response => {
+                return response.text();
+            })
+            .then(response => {
+                content5.innerHTML = window.marked.marked(response);
+            })
+    }
+}
+if (window.marked) {
+    read();
+}

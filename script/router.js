@@ -6,7 +6,6 @@ class Router {
   }
 
   loadRoute(...urlSegments) {
-    console.log('loading route')
     // Получение шаблона для данного маршрута.
     const matchedRoute = this._matchUrlToRoute(urlSegments);
 
