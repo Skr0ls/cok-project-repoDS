@@ -45,25 +45,17 @@ const routes = [
     path: '/clothes-shoulders-virtual-simulator',
     getTemplate: (params) => '../modules/shoulders/virtual-simulator/virtual-simulator.html'
   },
-  {
-    path: '/clothes-shoulders-video-lesson',
-    getTemplate: (params) => '../modules/shoulders/video-lesson/video.html'
-  },
 
   {
-    path: '/clothes-tourism-dynamic-infographic',
-    getTemplate: (params) => '../modules/shoulders/dynamic-infographic/dynamic-infographic.html'
-  },
-  {
-    path: '/clothes-tourism-interactive-simulator',
+    path: '/tourism-interactive-simulator',
     getTemplate: (params) => '../modules/tourism/interactive-simulator/interactive-simulator.html'
   },
   {
-    path: '/clothes-tourism-virtual-simulator',
+    path: '/tourism-virtual-simulator',
     getTemplate: (params) => '../modules/tourism/virtual-simulator/virtual-simulator.html'
   },
   {
-    path: '/clothes-tourism-video-lesson',
+    path: '/tourism-video-lesson',
     getTemplate: (params) => '../modules/tourism/video-lesson/video.html'
   },
 ];
