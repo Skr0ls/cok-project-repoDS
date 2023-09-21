@@ -25,8 +25,8 @@ function read() {
             file5 = 'script/markdown/recomended/belts/3.md';
             break;
         case '/clothes-shoulders':
-            file1 = 'script/markdown/keywords/shoulders-info.md';
-            file2 = 'script/markdown/aboutinfo/shoulders-key.md';
+            file1 = 'script/markdown/aboutinfo/shoulders-info.md';
+            file2 = 'script/markdown/keywords/shoulders-key.md';
             file3 = 'script/markdown/recomended/shoulders/1.md';
             file4 = 'script/markdown/recomended/shoulders/2.md';
             file5 = 'script/markdown/recomended/shoulders/3.md';
