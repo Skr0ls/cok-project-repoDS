@@ -109,16 +109,29 @@
 }
 .pop-up_img{
     display: flex;
-    justify-content: center;
-    gap: 10vw;
-}
-.pop-up_img1{
-    display: flex;
-    justify-content: center;
-    gap: 5vw;
+    align-items: center;
+    gap: 3vw;
+    max-width: 850px;
 }
 .pop-up_image{
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.pop-up-window p {
+    margin: 0;
+}
+.pop-up__content{
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
+.pop-up__content p{
+   width: 100% ;
+}
+
+p img{
+    margin: 0 auto;
+    margin-top: 20px;
+
 }
