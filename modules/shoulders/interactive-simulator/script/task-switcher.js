@@ -26,7 +26,13 @@ for(i = 0; i < circles.length; i++) {
         }
 
         document.querySelector(`#${button}`).classList.add('practice-part-wrap--active');
-        tabTarget.classList.add('circle_active');      
+        tabTarget.classList.add('circle_active');     
+        if(numtaskNow == circles.length) {
+            nextBtn.innerHTML = "Закончить"
+        }
+        else {
+            nextBtn.innerHTML = "Далее"
+        } 
     })
 }
 
@@ -49,12 +55,26 @@ backBtn.addEventListener('click',()=> {
         else if(numtaskNow == 7) {
             document.querySelector('.task-text').innerHTML = "Выберите правильный вариант перевода вытачки для данной модели"
         }
+        if(numtaskNow == circles.length) {
+            nextBtn.innerHTML = "Закончить"
+        }
+        else {
+            nextBtn.innerHTML = "Далее"
+        }
     }
 })
 
 const nextBtn = document.querySelector('.next-btn')
 
 nextBtn.addEventListener('click',()=> {
+    if(nextBtn.innerHTML == "Закончить") {
+        document.querySelector(`#task-${numtaskNow}`).classList.remove('practice-part-wrap--active');
+        const resultBlock = document.querySelector('.result-block');
+        resultBlock.classList.add('result-block--active')
+        document.querySelector('.virtual-simulator__footer').style.cssText = "display: none;"
+        clearInterval(intervalId);
+        RaschitatiBalli()
+    }
     console.log(numtaskNow)
     if(numtaskNow < 8) {
         for(i = 0; i < circles.length; i++) {
@@ -71,5 +91,25 @@ nextBtn.addEventListener('click',()=> {
         else if(numtaskNow == 7) {
             document.querySelector('.task-text').innerHTML = "Выберите правильный вариант перевода вытачки для данной модели"
         }
+        if(numtaskNow == circles.length) {
+            nextBtn.innerHTML = "Закончить"
+        }
+        else {
+            nextBtn.innerHTML = "Далее"
+        }
     }
 })
+
+function RaschitatiBalli() {
+    let ball = 0;
+    if(document.querySelector('.true-answer-1').checked) ball++
+    if(document.querySelector('.true-answer-2').checked) ball++
+    if(document.querySelector('.true-answer-3').checked) ball++
+    if(document.querySelector('.true-answer-4').checked) ball++
+    if(document.querySelector('.true-answer-5').checked) ball++
+    if(document.querySelector('.true-answer-6').checked) ball++
+    if(document.querySelector('.true-answer-7').checked) ball++
+    if(document.querySelector('.true-answer-8').checked) ball++
+
+    document.querySelector('.result-text').innerHTML = "Количество баллов: "+ball
+}
