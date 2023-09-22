@@ -15,6 +15,10 @@ const routes = [
     path: '/clothes-shoulders',
     getTemplate: (params) => 'modules/shoulders/shoulders.html'
   },
+  {
+    path: '/phisculture',
+    getTemplate: (params) => 'modules/phisculture/phisculture.html'
+  },
   
   {
     path: '/clothes-belts-dynamic-infographic',
@@ -57,5 +61,18 @@ const routes = [
   {
     path: '/tourism-video-lesson',
     getTemplate: (params) => 'modules/tourism/video-lesson/video.html'
+  },
+
+  {
+    path: '/phisculture-video-lesson',
+    getTemplate: (params) => 'modules/phisculture/video-lesson/video.html'
+  },
+  {
+    path: '/phisculture-virtual-simulator',
+    getTemplate: (params) => 'modules/phisculture/virtual-simulator/virtual-simulator.html'
+  },
+  {
+    path: '/phisculture-interactive-simulator',
+    getTemplate: (params) => 'modules/phisculture/interactive-simulator/interactive-simulator.html'
   },
 ];

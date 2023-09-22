@@ -31,6 +31,13 @@ function read() {
             file4 = 'script/markdown/recomended/shoulders/2.md';
             file5 = 'script/markdown/recomended/shoulders/3.md';
             break;
+        case '/phisculture':
+            file1 = 'script/markdown/aboutinfo/phisculture-info.md';
+            file2 = 'script/markdown/keywords/phisculture-key.md';
+            file3 = 'script/markdown/recomended/phisculture/1.md';
+            file4 = 'script/markdown/recomended/phisculture/2.md';
+            file5 = 'script/markdown/recomended/phisculture/3.md';
+            break;
         default:
             file1 = 'script/markdown/aboutinfo/tourism-info.md';
             file2 = 'script/markdown/keywords/tourism-key.md';
