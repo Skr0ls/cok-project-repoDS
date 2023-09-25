@@ -19,6 +19,10 @@ const routes = [
     path: '/phisculture',
     getTemplate: (params) => 'modules/phisculture/phisculture.html'
   },
+  {
+    path: '/hotel',
+    getTemplate: (params) => 'modules/hotel/hotel.html'
+  },
   
   {
     path: '/clothes-belts-dynamic-infographic',
@@ -73,6 +77,19 @@ const routes = [
   },
   {
     path: '/phisculture-interactive-simulator',
+    getTemplate: (params) => 'modules/phisculture/interactive-simulator/interactive-simulator.html'
+  },
+
+  {
+    path: '/hotel-dynamic-infographic',
+    getTemplate: (params) => 'modules/hotel/dynamic-infographic/dynamic-infographic.html'
+  },
+  {
+    path: '/hotel-virtual-simulator',
+    getTemplate: (params) => 'modules/phisculture/virtual-simulator/virtual-simulator.html'
+  },
+  {
+    path: '/hotel-interactive-simulator',
     getTemplate: (params) => 'modules/phisculture/interactive-simulator/interactive-simulator.html'
   },
 ];

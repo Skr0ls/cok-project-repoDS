@@ -38,6 +38,13 @@ function read() {
             file4 = 'script/markdown/recomended/phisculture/2.md';
             file5 = 'script/markdown/recomended/phisculture/3.md';
             break;
+        case '/hotel':
+            file1 = 'script/markdown/aboutinfo/hotel-info.md';
+            file2 = 'script/markdown/keywords/hotel-key.md';
+            file3 = 'script/markdown/recomended/hotel/1.md';
+            file4 = 'script/markdown/recomended/hotel/2.md';
+            file5 = 'script/markdown/recomended/hotel/3.md';
+            break;
         default:
             file1 = 'script/markdown/aboutinfo/tourism-info.md';
             file2 = 'script/markdown/keywords/tourism-key.md';
