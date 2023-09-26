@@ -16,16 +16,16 @@ for(i = 0; i < circles.length; i++) {
         }
         numNum.innerHTML = button[5]
         numtaskNow = button[5] //номер задания
-        console.log(button)
+        if(button[6] !== undefined) numNum.innerHTML += '0';
 
         document.querySelector(`#${button}`).classList.add('practice-part-wrap--active');
-        tabTarget.classList.add('circle_active');     
+        tabTarget.classList.add('circle_active');
         if(numtaskNow == circles.length) {
             nextBtn.innerHTML = "Закончить"
         }
         else {
             nextBtn.innerHTML = "Далее"
-        } 
+        }
     })
 }
 
@@ -42,7 +42,6 @@ backBtn.addEventListener('click',()=> {
         document.querySelector(`#task-${numtaskNow}`).classList.add('practice-part-wrap--active');
         numNum.innerHTML = numtaskNow
         circles[numtaskNow - 1].classList.add('circle_active');
-
         if(numtaskNow == circles.length) {
             nextBtn.innerHTML = "Закончить"
         }
@@ -63,8 +62,8 @@ nextBtn.addEventListener('click',()=> {
         clearInterval(intervalId);
         RaschitatiBalli()
     }
-    console.log(numtaskNow)
-    if(numtaskNow < 8) {
+
+    if(numtaskNow < 10) {
         for(i = 0; i < circles.length; i++) {
             circles[i].classList.remove('circle_active');taskWraps[i].classList.remove('practice-part-wrap--active')
         }
@@ -79,37 +78,22 @@ nextBtn.addEventListener('click',()=> {
         else {
             nextBtn.innerHTML = "Далее"
         }
-    }
+    }   
 })
+
 
 function RaschitatiBalli() {
     let ball = 0;
-    if(document.querySelector('.true-answer-1-1').checked && !(document.querySelector('.not-true-answer-1-2').checked) &&
-    !(document.querySelector('.not-true-answer-1-3').checked) && !(document.querySelector('.not-true-answer-1-4').checked) &&
-    document.querySelector('.true-answer-1-5').checked) ball++
-    if(!(document.querySelector('.not-true-answer-2-1').checked) && document.querySelector('.true-answer-2-2').checked &&
-    !(document.querySelector('.not-true-answer-2-3').checked) &&
-    document.querySelector('.true-answer-2-4').checked) ball++
-    if(!(document.querySelector('.not-true-answer-3-1').checked) &&
-    !(document.querySelector('.not-true-answer-3-2').checked) && !(document.querySelector('.not-true-answer-3-3').checked) && 
-    document.querySelector('.true-answer-3-4').checked &&
-    document.querySelector('.true-answer-3-5').checked) ball++
-    if(!(document.querySelector('.not-true-answer-4-1').checked) &&
-    !(document.querySelector('.not-true-answer-4-2').checked) && document.querySelector('.true-answer-4-3').checked && 
-    document.querySelector('.true-answer-4-4').checked &&
-    !(document.querySelector('.not-true-answer-4-5').checked)) ball++
-    if(!(document.querySelector('.not-true-answer-5-1').checked) && document.querySelector('.true-answer-5-2').checked &&
-    !(document.querySelector('.not-true-answer-5-3').checked) && !(document.querySelector('.not-true-answer-5-5').checked) &&
-    document.querySelector('.true-answer-5-4').checked) ball++
-    if(document.querySelector('.true-answer-6-1').checked && !(document.querySelector('.not-true-answer-6-2').checked) &&
-    document.querySelector('.true-answer-6-3').checked && !(document.querySelector('.not-true-answer-6-4').checked)) ball++
-    if(document.querySelector('.true-answer-7-1').checked && !(document.querySelector('.not-true-answer-7-2').checked) &&
-    !(document.querySelector('.not-true-answer-7-3').checked) && !(document.querySelector('.not-true-answer-7-5').checked) &&
-    document.querySelector('.true-answer-7-4').checked) ball++
-    if(document.querySelector('.true-answer-8-1').checked && !(document.querySelector('.not-true-answer-8-2').checked) &&
-    !(document.querySelector('.not-true-answer-8-4').checked) && !(document.querySelector('.not-true-answer-8-5').checked) &&
-    document.querySelector('.true-answer-8-3').checked) ball++
-
+    if(document.querySelector('.true-answer-1').checked) ball++
+    if(document.querySelector('.true-answer-2').checked) ball++
+    if(document.querySelector('.true-answer-3').checked) ball++
+    if(document.querySelector('.true-answer-4').checked) ball++
+    if(document.querySelector('.true-answer-5').checked) ball++
+    if(document.querySelector('.true-answer-6').checked) ball++
+    if(document.querySelector('.true-answer-7').checked) ball++
+    if(document.querySelector('.true-answer-8').checked) ball++
+    if(document.querySelector('.true-answer-9').checked) ball++
+    if(document.querySelector('.true-answer-10').checked) ball++
 
     document.querySelector('.result-text').innerHTML = "Количество баллов: "+ball
 }
