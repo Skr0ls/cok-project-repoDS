@@ -28,6 +28,10 @@
     border-radius: 30px;
 }
 
+.right-side__circles {
+    justify-content: center !important;
+}
+
 .varian-with-img.varian-with-img-imgs .variant-checkbox{
     align-items: center;
 }
@@ -39,7 +43,11 @@
 .next-btn, .circle {
     cursor: pointer;
 }
-
+.back-btn,
+.next-btn {
+    width: 150px;
+    text-align: center;
+}
 .virtual-simulator__header-rigth-side {
     display: flex;
     align-items: center;
@@ -123,11 +131,11 @@
     padding: 0 8px 0 23px;
     margin-bottom: 20px;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;
 }
 
 .task-text-wrap {
-    width: 55%;
+    width: 65%;
     min-height: 87px;
     color: var(--text-color);
     font-family: 'Dela Gothic One';

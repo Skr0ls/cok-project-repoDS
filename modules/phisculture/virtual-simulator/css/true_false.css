@@ -1,21 +1,20 @@
 .true-false__task {
     display: flex;
     align-items: center;
-    padding: 8px 8px;
+    padding: 15px 10px;
     gap: 15px;
     border-radius: 20px;
     border: 2px solid #3CBA94;
 }
 
 .true-false__task + .true-false__task {
-    margin-top: 8px;
+    margin-top: 10px;
 }
 
 .true-false__text-otvet {
     font-weight: 700;
     padding-left: 10px;
     border-left: 2px solid #3CBA94;
-    font-size: 12px !important; 
 }
 
 @media (max-width: 425px) {
