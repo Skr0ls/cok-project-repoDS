@@ -38,7 +38,7 @@ i::after{
 i::before{
     content: "";
     position: absolute;
-    background-image: url("../img/Vector.svg");
+    background-image: url("../Vector.svg");
     background-repeat: no-repeat;
     width: 23px;
     height: 23px;
