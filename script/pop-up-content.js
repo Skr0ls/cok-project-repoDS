@@ -52,6 +52,20 @@ function read() {
             file4 = 'script/markdown/recomended/hotel/2.md';
             file5 = 'script/markdown/recomended/hotel/3.md';
             break;
+        case '/cooking':
+            file1 = 'script/markdown/aboutinfo/cooking-info.md';
+            file2 = 'script/markdown/keywords/cooking-key.md';
+            file3 = 'script/markdown/recomended/cooking/1.md';
+            file4 = 'script/markdown/recomended/cooking/2.md';
+            file5 = 'script/markdown/recomended/cooking/3.md';
+            break;
+        case '/cocktails':
+            file1 = 'script/markdown/aboutinfo/cocktails-info.md';
+            file2 = 'script/markdown/keywords/cocktails-key.md';
+            file3 = 'script/markdown/recomended/cocktails/1.md';
+            file4 = 'script/markdown/recomended/cocktails/2.md';
+            file5 = 'script/markdown/recomended/cocktails/3.md';
+            break;
         default:
             file1 = 'script/markdown/aboutinfo/tourism-info.md';
             file2 = 'script/markdown/keywords/tourism-key.md';
