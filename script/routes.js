@@ -1,7 +1,7 @@
 const routes = [
   {
     path: '/',
-    getTemplate: (params) => 'modules/tourism/tourism.html'
+    getTemplate: (params) => 'modules/main-menu/index.html'
   },
   {
     path: '/tourism',
@@ -26,6 +26,14 @@ const routes = [
   {
     path: '/phisculture_1',
     getTemplate: (params) => 'modules/phisculture_1/phisculture_1.html'
+  },
+  {
+    path: '/cooking',
+    getTemplate: (params) => 'modules/cooking/cooking.html'
+  },
+  {
+    path: '/cocktails',
+    getTemplate: (params) => 'modules/cocktails/cocktails.html'
   },
   
   {
@@ -108,5 +116,31 @@ const routes = [
   {
     path: '/phisculture_1-interactive-simulator',
     getTemplate: (params) => 'modules/phisculture_1/interactive-simulator/interactive-simulator.html'
+  },
+
+  {
+    path: '/cooking-video-lesson',
+    getTemplate: (params) => 'modules/cooking/video-lesson/video.html'
+  },
+  {
+    path: '/cooking-virtual-simulator',
+    getTemplate: (params) => 'modules/cooking/virtual-simulator/virtual-simulator.html'
+  },
+  {
+    path: '/cooking-interactive-simulator',
+    getTemplate: (params) => 'modules/cooking/interactive-simulator/interactive-simulator.html'
+  },
+
+  {
+    path: '/cocktails-video-lesson',
+    getTemplate: (params) => 'modules/cocktails/video-lesson/video.html'
+  },
+  {
+    path: '/cocktails-virtual-simulator',
+    getTemplate: (params) => 'modules/cocktails/virtual-simulator/virtual-simulator.html'
+  },
+  {
+    path: '/cocktails-interactive-simulator',
+    getTemplate: (params) => 'modules/cocktails/interactive-simulator/interactive-simulator.html'
   },
 ];
